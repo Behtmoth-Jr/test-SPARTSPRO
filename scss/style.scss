@@ -42,24 +42,41 @@ a {
     &:hover{
         color:hsla(19, 84%, 59%, 1);
     }
+
+    &:active {
+        color: hsl(19, 62%, 51%);
+    }
+}
+
+p {
+    color: hsla(225, 13%, 18%, 1);
 }
 
 .button {
     font-family:'Open-Sans';
-    background-color: #272A33;
+    background-color: hsla(225, 13%, 18%, 1);
     border-radius: 8px;
     transition: 0.3s ease-out;
     color: #FFFFFF;
-    padding: 15px 30px; 
+    padding: 12px 31px;
     font-size: 18px;
     line-height: 21px;
+    border: none;
 
     &:hover {
         background-color: hsla(19, 84%, 59%, 1) ;
     }
 
+    &:active {
+        background-color: hsl(19, 62%, 51%);
+    }
+
     &:disabled {
         background-color: hsl(240, 2%, 84%);
+    }
+
+    &--centre {
+        margin: auto;
     }
 }
 
@@ -72,13 +89,16 @@ a {
     }
 }
 
-
 .header-container {
     display: flex;
     align-items: center;
     padding: 21px 0;
     max-width: 1440px;
     justify-content: space-between;
+
+    @media (max-width: 1441px) {
+        max-width: 1160px;
+    }
 }
 
 .header-nav {
@@ -91,7 +111,6 @@ a {
 .recommendations {
     width: 100%;
     padding: 0 15px;
-    display: flex;
 
     &__container {
         margin: auto;
@@ -102,17 +121,164 @@ a {
     display: flex;
     max-width: 1440px;
     padding-top: 79px;
-    width: 100%;
     flex-direction: column;
+
+    @media (max-width: 1441px) {
+        max-width: 1160px;
+    }
+}
+
+.recommendations-cards {
+    padding-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 2px;
+}
+
+.card {
+    border: 1px solid hsla(210, 25%, 90%, 1);
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 705px;
+    transition: 0.3s ease-out;
+
+    &:hover {
+        box-shadow: 0px 20px 20px 0px hsl(0deg 0% 0% / 17%);
+    }
+
+    @media (max-width: 1441px) {
+        width: 565px;
+    }
+
+    &__img {
+        margin: -1px;
+        width: 220px;
+        height: 220px;
+    }
+
+    &__info {
+        margin: 0 30px;
+    }
 }
 
 .card-info {
-    display: flex;
-    flex-direction: column;
 
     &__txt {
         font-family: 'Roboto';
         font-size: 18px;
-        line-height: 21px;
+        line-height: 22px;
+        height: 62px;
+        margin-bottom: 2px;
+    }
+
+    &__availability {
+        display: flex;
+        align-items: center;
+        font-family: 'Open-Sans';
+        font-size: 16px;
+        line-height: 18px;
+        padding: 16px 0;
+
+        &--orange::before {
+            content: "";
+            display: block;
+            background-image: url("../img/orange.svg");
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
+        }
+
+        &--green::before {
+            content: "";
+            display: block;
+            background-image: url("../img/green.svg");
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.about {
+    width: 100%;
+    padding: 0 15px;
+
+    &__container {
+        margin: auto;
+    }
+}
+
+.about-container {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+
+    @media (max-width: 1441px) {
+        padding: 84px 0;
+        max-width: 1160px;
+    }
+}
+
+.about-content {
+    padding: 37px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-content-img {
+    display: flex;
+    flex-wrap: wrap;
+    width: min-content;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.about-content-info {
+    width: 705px;
+
+    &__title {
+        font-family: "Open-Sans";
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: 700;
+        color: hsl(225, 13%, 18%);
+    }
+
+    &__txt {
+        font-family: "Open-Sans";
+        font-size: 16px;
+        line-height: 24px;
+        color: hsl(225, 13%, 18%);
+        margin-bottom: 31px;
+    }
+}
+
+.about-content-info-list {
+    list-style: none;
+
+    &__item {
+        font-family: "Open-Sans";
+        font-size: 16px;
+        line-height: 23px;
+        padding-left: 39px;
+        margin: 21px 0;
+        position: relative;
+        color: hsl(225, 13%, 18%);
+
+        &::before {
+            content: "";
+            background: url('../img/list.svg');
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
