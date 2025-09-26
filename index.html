@@ -8,24 +8,35 @@
     <link rel="shortcut icon" href="img/favicon.ico " type="image/x-icon">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-container header__container">
-            <a href="#"><img src="./img/logo.svg" alt="SPARTSPRO">
-            </a>
-            <nav class="header-nav">
+            <div class="header-title">
                 <a href="#">
+                    <!-- <img src="./img/logo.svg" alt="SPARTSPRO" class="header-title__img"> -->
+                     <picture>
+                        <source srcset="./img/logo.svg" media="(min-width: 1920px)">
+                        <source srcset="./img/logo_576.svg" media="(min-width: 577px)">
+                        <img src="./img/logo.svg" alt="SPARTSPRO">
+                     </picture>
+                </a>
+                <button class="header-burger" id="burger">
+                    <span class="header-burger__middle"></span>
+                </button>
+            </div>
+            <nav class="header-nav" id="nav">
+                <a href="#" class="header-nav__item">
                     ГЛАВНАЯ
                 </a>
-                <a href="#">
+                <a href="#" class="header-nav__item">
                     КАТАЛОГ
                 </a>
-                <a href="#">
+                <a href="#" class="header-nav__item">
                     О КОМПАНИИ
                 </a>
-                <a href="#">
+                <a href="#" class="header-nav__item">
                     ОПЛАТА И ДОСТАВКА
                 </a>
-                <a href="#">
+                <a href="#" class="header-nav__item">
                     КОНТАКТЫ 
                 </a>
             </nav>
@@ -47,7 +58,7 @@
                             <p class="card-info__availability card-info__availability--green">
                                 В наличии 50 м.
                             </p>
-                            <button class="button">
+                            <button class="button button--small">
                                 Подробнее
                             </button>
                         </div>
@@ -61,7 +72,7 @@
                             <p class="card-info__availability card-info__availability--orange">
                                 Под заказ
                             </p>
-                            <button class="button">
+                            <button class="button button--small">
                                 Подробнее
                             </button>
                         </div>
@@ -75,12 +86,12 @@
                             <p class="card-info__availability card-info__availability--green">
                                 В наличии 50 м.
                             </p>
-                            <button class="button">
+                            <button class="button button--small">
                                 Подробнее
                             </button>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card card--disable">
                         <img src="./img/card4.png" alt="" class="card__img">
                         <div class="card-info card__info">
                             <p class="card-info__txt">
@@ -89,7 +100,7 @@
                             <p class="card-info__availability card-info__availability--green">
                                 В наличии 50 м.
                             </p>
-                            <button class="button">
+                            <button class="button button--small">
                                 Подробнее
                             </button>
                         </div>
@@ -103,12 +114,12 @@
                             <p class="card-info__availability card-info__availability--green">
                                 В наличии 50 м.
                             </p>
-                            <button class="button">
+                            <button class="button button--small">
                                 Подробнее
                             </button>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card card--disable">
                         <img src="./img/card6.png" alt="" class="card__img">
                         <div class="card-info card__info">
                             <p class="card-info__txt">
@@ -117,7 +128,7 @@
                             <p class="card-info__availability card-info__availability--green">
                                 В наличии 50 м.
                             </p>
-                            <button class="button">
+                            <button class="button button--small">
                                 Подробнее
                             </button>
                         </div>
@@ -134,12 +145,33 @@
                 </h2>
                 <div class="about-content">
                     <div class="about-content-img">
-                        <img src="./img/roof.png" alt="" class="about-content-img__item">
-                        <img src="./img/elevator.png" alt="" class="about-content-img__item">
-                        <img src="./img/building.png" alt="" class="about-content-img__item">
-                        <picture>
-                            
-                        </picture>
+                    <picture>
+                        <source srcset="./img/roof_390.png" media="(max-width: 390px)">
+                        <source srcset="./img/roof_576.png" media="(max-width: 576px)">
+                        <source srcset="./img/roof_768.png" media="(max-width: 768px)">
+                        <source srcset="./img/roof_1160.png" media="(max-width: 1160px)">
+                        <source srcset="./img/roof_1440.png" media="(max-width: 1440px)">
+                        <source srcset="./img/roof.png" media="(max-width: 1920px)">
+                        <img src="./img/roof.png" alt="">
+                    </picture>
+                    <picture>
+                        <source srcset="./img/elevator_390.png" media="(max-width: 390px)">
+                        <source srcset="./img/elevator_576.png" media="(max-width: 576px)">
+                        <source srcset="./img/elevator_768.png" media="(max-width: 768px)">
+                        <source srcset="./img/elevator_1160.png" media="(max-width: 1160px)">
+                        <source srcset="./img/elevator_1440.png" media="(max-width: 1440px)">
+                        <source srcset="./img/elevator.png" media="(max-width: 1920px)">
+                        <img src="./img/elevator.png" alt="">
+                    </picture>
+                    <picture>
+                        <source srcset="./img/building_390.png" media="(max-width: 390px)">
+                        <source srcset="./img/building_576.png" media="(max-width: 576px)">
+                        <source srcset="./img/building_768.png" media="(max-width: 768px)">
+                        <source srcset="./img/building_1160.png" media="(max-width: 1160px)">
+                        <source srcset="./img/building_1440.png" media="(max-width: 1440px)">
+                        <source srcset="./img/building.png" media="(max-width: 1920px)">
+                        <img src="./img/building.png" alt="">
+                    </picture>
                     </div>
                     <div class="about-content-info">
                         <p class="about-content-info__title">
@@ -172,5 +204,6 @@
             </div>
         </section>
     </main>
+    <script src="./script/script.js"></script>
 </body>
 </html>
