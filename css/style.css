@@ -18,7 +18,7 @@
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/roboto-Bold.woff2") format("woff2"), url("../fonts/roboto-Bold.woff") format("woff"), url("../fonts/roboto-Bold.ttf") format("truetype");
+  src: url("../fonts/roboto-bold.woff2") format("woff2"), url("../fonts/roboto-bold.woff") format("woff"), url("../fonts/roboto-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
