@@ -58,6 +58,11 @@ h2 {
         font-size: 20px;
         line-height: 23px;
     }
+
+    @media (max-width: 371px) {
+        font-size: 17px;
+        line-height: 19px;
+    }
 }
 
 a {
@@ -109,6 +114,12 @@ p {
         @media (max-width: 577px) {
             font-size: 16px;
             line-height: 19px;
+        }
+
+        @media (max-width: 371px){
+            font-size: 14px;
+            line-height: 17px;
+            padding: 12px 22px;
         }
     }
 }
@@ -252,8 +263,7 @@ p {
         transition: all 0.4s ease;
         background: linear-gradient(178deg,hsla(0, 0%, 100%, 0) 0%, hsl(0, 0%, 100%) 15%);
         padding-top: 10px;
-        box-shadow: 0px 20px 20px 0px hsla(0, 0%, 0%, 0.17);
-
+        
         &.active {
             display: flex;
             opacity: 1;
@@ -277,6 +287,9 @@ p {
         padding-top: 9px;
     }
 
+    @media (max-width: 577px) {
+        max-width: 290px;
+    }
 
     &__item {
         color: hsla(225, 13%, 18%, 1);
@@ -364,6 +377,10 @@ p {
         flex-direction: column;
     }
 
+    @media (max-width: 371px) {
+        max-width: 136px;
+    }
+
     &--disable {
 
         @media (max-width: 577px) {
@@ -380,10 +397,14 @@ p {
             width: 170px;
             height: 170px;
         }
+
+        @media (max-width: 371px) {
+            width: 136px;
+            height: 136px;
+        }
     }
 
     &__info {
-        margin: 0 30px;
 
         @media (max-width: 577px) {
             margin: 0px;
@@ -393,6 +414,11 @@ p {
 }
 
 .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 30px;
 
     @media (max-width: 1161px) {
         width: 40%;
@@ -404,19 +430,23 @@ p {
 
     @media (max-width: 577px) {
         width: auto;
+        padding: 11px;
     }
 
     &__txt {
         font-family: 'Roboto';
         font-size: 18px;
         line-height: 22px;
-        height: 62px;
-        margin-bottom: 2px;
 
         @media (max-width: 577px) {
             height: 98px;
             font-size: 16px;
             line-height: 24px;
+        }
+
+        @media (max-width: 371px) {
+            font-size: 14px;
+            line-height: 17px;
         }
     }
 
@@ -432,6 +462,11 @@ p {
             padding: 12px 0;
             font-size: 14px;
             line-height: 17px;
+        }
+
+        @media (max-width: 371px)  {
+            font-size: 12px;
+            line-height: 15px;
         }
 
         &--orange::before {
@@ -486,6 +521,10 @@ p {
 
     @media (max-width: 577px) {
         max-width: 360px;
+    }
+
+    @media (max-width: 371px) {
+        max-width: 290px;
     }
 }
 
@@ -554,6 +593,10 @@ p {
         line-height: 24px;
         font-weight: 700;
         color: hsl(225, 13%, 18%);
+
+        @media (max-width: 371px) {
+            word-break: break-word;
+        }
     }
 
     &__txt {
