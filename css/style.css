@@ -126,6 +126,7 @@ p {
   padding: 20px 0;
   max-width: 1440px;
   justify-content: space-between;
+  position: relative;
 }
 @media (max-width: 1919px) {
   .header-container {
@@ -261,20 +262,9 @@ p {
     border-bottom: 1px solid hsl(210, 31%, 87%);
   }
 }
-@media (max-width: 769px) {
-  .header-nav {
-    max-width: 576px;
-  }
-}
 @media (max-width: 577px) {
   .header-nav {
-    max-width: 358px;
     padding-top: 9px;
-  }
-}
-@media (max-width: 577px) {
-  .header-nav {
-    max-width: 290px;
   }
 }
 .header-nav__item {
